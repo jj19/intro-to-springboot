@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Result Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link th:replace="~{styles :: div}">
+</head>
+
+<body>
+  <div th:replace="~{header :: header}"></div>
+
+  <div class="container mt-4">
+    <h1 class="display-6 text-center">Thank you for your Contribution</h1>
+    <span class="fw-bold">Recipe ID</span>
+    <p th:text="${recipe.id}" />
+    <span class="fw-bold">Recipe Title</span>
+    <p th:text="${recipe.name}" />
+    <span class="fw-bold">Ingredients</span>
+    <p th:text="${recipe.ingredients}" />
+    <span class="fw-bold">Steps</span>
+    <p th:text="${recipe.steps}" />
+    <span class="fw-bold">Source</span>
+    <p th:text="${recipe.source}" />
+    <a class="btn btn-primary" style="margin: 0 5px;" href="/upload">Submit another recipe</a>
+    <a class="btn btn-success" style="margin: 0 5px;" href="/recipes">View All recipes</a>
+  </div>
+
+
+  <div th:replace="~{scripts :: div}"></div>
+</body>
+
+</html>

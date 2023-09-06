@@ -1,0 +1,47 @@
+:root {
+	--nymrb: #944ea1;
+}
+
+.card-cover {
+	transition: box-shadow 0.3s ease-in;
+}
+
+.card-cover:hover {
+	-webkit-box-shadow: 0px 0px 11px -3px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 11px -3px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 11px -3px rgba(0, 0, 0, 0.75);
+}
+
+.btn-outline-brand {
+	border: 2px solid var(--nymrb);
+	color: var(--nymrb);
+}
+
+.btn-outline-brand:hover {
+	background-color: var(--nymrb);
+	color: white;
+}
+
+.nav-brand-logo {
+	color: var(--nymrb);
+	font-weight: 500;
+}
+
+h1:has(.display-6) {
+	text-shadow: 2px 1px 1px black;
+}
+
+.display-5:is(h1, h2) {
+	text-shadow: 2px 1px 1px black;
+}
+.display-7 {
+	text-shadow: 2px 1px 1px black;
+}
+
+li > small {
+	text-shadow: 2px 1px 1px black;
+}
+.btn-primary {
+	background-color: var(--nymrb);
+	border: var(--nymrb);
+}

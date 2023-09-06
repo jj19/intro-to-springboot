@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>All Recipes</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link th:replace="~{styles :: div}">
+</head>
+
+<body>
+  <div th:replace="~{header :: header}"></div>
+  <div class="container mt-4">
+    <h1 class="display-6 text-center fw-bold">All Recipes</h1>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Ingredients</th>
+          <th>Steps</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="recipe : ${recipes}">
+          <td th:text="${recipe.id}">1</td>
+          <td th:text="${recipe.name}">Recipe Name</td>
+          <td th:text="${recipe.ingredients}">Ingredients</td>
+          <td th:text="${recipe.steps}">Steps</td>
+          <td th:text="${recipe.source}">Source</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="col-md text-center">
+      <a class="btn btn-primary mt-4" href="/upload">Submit a new recipe</a>
+    </div>
+
+    <div th:replace="~{scripts :: div}"></div>
+  </div>
+</body>
+
+</html>

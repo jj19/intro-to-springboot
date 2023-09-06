@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand display-2 nav-brand-logo" href="/">NYMRB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" th:href="@{/}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Recipe of the Day</a>
+            </li>
+            <li class=" nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Recipes
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" th:href="@{/recipe}">Breakfast</a></li>
+                <li><a class="dropdown-item" th:href="@{/recipe}">Lunch</a></li>
+                <li><a class="dropdown-item" th:href="@{/recipe}">Dinner</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" th:href="@{/recipe}">Drinks and Deserts</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/recipes}">All Recipes</a>
+            </li>
+          </ul>
+
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search not working yet" aria-label="Search">
+            <button class="btn btn-outline-brand" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid py-5 px-0 w-100 text-center" style="background:center url(
+        ../../img/kitchen.jpeg;);">
+
+      <h1 class="display-5 fw-bold text-shadow" style="color: var(--nymrb);">Not Your Momma's Recipe Book</h1>
+      <p class="col-md-8 fs-5 w-100 my-5 text-white py-3" style="background-color: var(--nymrb)">
+        Forget about them index cards and them fancy books.<br>
+        The biggest Recipe Collection of all Times</p>
+      <a th:href="@{/upload}" class=" btn btn-lg text-white fs-6" style="background-color: var(--nymrb);"
+        type="button">Upload
+        Recipe</a>
+    </div>
+  </header>
+</body>
+
+</html>

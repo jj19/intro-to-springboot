@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Recipe</title>
+  <div th:replace="~{styles :: link}"></div>
+</head>
+
+<body>
+  <div th:replace="~{header :: header}"></div>
+  <div class="container mt-4">
+    <div class="row">
+      <h2 class="display-6 fw-bold text-center">Upload Recipe</h2>
+    </div>
+    <div class="row">
+      <form action="#" th:action="@{/result}" th:object="${recipe}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <div class="form-group">
+          <label for="text">Recipe Name</label>
+          <input id="text" th:field="*{name}" name=" text" type="text" required="required" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="ingredients">Ingredients</label>
+          <textarea id="ingredients" th:field="*{ingredients}" name="ingredients" cols="40" rows="5" required="required"
+            class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="steps">Steps</label>
+          <textarea id="steps" th:field="*{steps}" name="steps" cols="40" rows="5" aria-describedby="Recipe Steps"
+            required="required" class="form-control"></textarea>
+          <span id="stepsHelp" class="form-text text-muted">Please enter steps one per line.</span>
+        </div>
+        <div class="form-group">
+          <label for="source">Recipe Source (optional)</label>
+          <input id="text1" name="source" th:field="*{source}" placeholder="Recipe Source or Website" type="text"
+            class="form-control">
+        </div>
+        <div class="form-group text-center">
+          <button name="submit" type="submit" class=" mt-4 btn btn-primary " style="width: 300px">Upload</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div th:replace="~{scripts :: div}"></div>
+</body>
+
+</html>
